@@ -7,6 +7,7 @@ import './App.css';
 import Header from './components/Header';
 
 import NotesList from './components/NotesList';
+import CreateNotes from './components/CreateNotes';
 
 
 function App() {
@@ -26,7 +27,12 @@ function App() {
 <Container className='mt-5'>
   <Row>
     <Col>
-    <NotesList notes={notes} />
+    <NotesList notes={notes} setNotes={setNotes} />
+    </Col>
+  </Row>
+  <Row>
+    <Col>
+    <CreateNotes notes={notes} setNotes={setNotes} />
     </Col>
   </Row>
 </Container>
